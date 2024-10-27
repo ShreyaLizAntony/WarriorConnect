@@ -1,0 +1,27 @@
+
+.errorImg {
+    position: absolute;
+    width: 582px;
+    height: 479px;
+    left: 395px;
+    top: 138px;
+}
+
+.errorText {
+    position: absolute;
+    width: 810px;
+    height: 78px;
+    left: 315px;
+    top: 673px;
+
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+
+    color: #000000;
+}
+
+
