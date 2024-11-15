@@ -1,0 +1,77 @@
+.view-profile {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+.profile-container {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #FDFAFA ;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.introduction-box {
+    border: 0.4px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.course-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.course-header, .course-row {
+    display: table-row;
+    text-align: left;
+    font-weight: bold;
+}
+
+.course-header-section{
+    color: #000;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.course-header span, .course-row span {
+    display: table-cell;
+    padding: 10px;
+    border: none;
+    text-align: center;
+}
+
+.course-row {
+    font-weight: normal;
+    background-color: #f9f9f9;
+}
+
+.connect-button {
+    background-color: #ffdd00;
+    border: none;
+    padding: 10px 70px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 2rem ;
+    color: #000;
+}
+
+.connect-button:hover {
+    background-color: #000;
+    color: #fff;}
+
+

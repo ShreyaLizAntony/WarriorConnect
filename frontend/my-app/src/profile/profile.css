@@ -1,0 +1,147 @@
+/* General Form Styling */
+* {
+    background-color: #FDFAFA;
+}
+
+.profile-setup {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  h2, h3, h4 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+  
+  /* Input and Textarea Styling */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+    resize: none;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  /* Section Styling */
+  .course-list, .social-list {
+    margin-top: 10px;
+  }
+  
+  .course-item, .social-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 0;
+  }
+  
+  /* Course and Social Input Fields */
+  .course-item input, .social-item input {
+    width: 45%; /* Ensures the input fields are side by side with space for the button */
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  /* Delete Button Styling */
+  .course-item button, .social-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .course-item button img, .social-item button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Add Button */
+  .add-btn {
+    background-color: #ffdd00;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #000;
+  }
+
+  .add-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Upload Buttons */
+  .upload-btn {
+    background-color: #ffdd00;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: #000;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 10px 10px 0;
+  }
+  
+  .upload-btn.black {
+    background-color: #000;
+    color: #fff;
+
+  }
+
+  .upload-btn.black:hover{
+    background-color: #ffdd00;
+    color: #000;
+  }
+  
+
+  button {
+    border-radius: 4px;
+  }
+
+  /* Submit Button */
+  .create-profile-btn {
+    background-color: #ffdd00;
+    border: none;
+    padding: 12px 100px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 30px;
+  }
+
+  .create-profile-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .upload-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  

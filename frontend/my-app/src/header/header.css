@@ -1,0 +1,39 @@
+* {
+    font-family: 'Poppins', sans-serif;
+  
+  }
+  
+  .logo{
+    padding-left: 20px;
+  }
+  
+  .header {
+    overflow: hidden;
+    padding: 20px 10px;
+    background-color: #FDFAFA;
+  
+  }
+  
+  .header .a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+  }
+  
+  
+  .header .a:hover {
+    text-decoration: underline #FFC300;
+    text-underline-offset: 10px;
+  }
+  
+  
+  
+  .header-right {
+    float: right;
+  }
+  
