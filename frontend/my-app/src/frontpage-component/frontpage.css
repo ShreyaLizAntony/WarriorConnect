@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body, html {
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.logo img {
+    width: 190px;
+    height: 67px;
+    left: 78px;
+    top: 20px;
+}
+  
+.nav {
+    display: flex;
+    gap: 100px; 
+}
+  
+  
+.nav-item {
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #000000;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-family: 'Dosis';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 81px;
+    margin-left: 50px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    width: 600px;
+}
+
+.description {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 50px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    width: 657px;
+}
+
+
+.sign-up-section {
+    display: flex; 
+    margin-top: 20px;
+    margin-left: 35px;
+    width: 100%; 
+}
+
+.sign-up-button {
+    margin-left: 10px;
+    width: 208px; 
+    height: 60px; 
+    background: #FFD700; 
+    border: none; 
+    border-radius: 10px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.sign-up-button:hover {
+    background: #FFC300; 
+}
+
+.sign-up-text {
+    font-family: 'Inria Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #0D0D0D; 
+    margin: 0;
+}
+
+.background-image {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    top: 100px;
+    right: 0;
+    margin-right: -20px;
+    background-size: cover;
+}
