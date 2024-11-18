@@ -3,7 +3,7 @@ import './error-page.css';
 
 const ErrorPage = () => {
   return (
-    <div>
+    <div class="container">
       <img class='errorImg' src="/Goodies Error.png" alt="Error"></img>
       <p class='errorText'>An Error Occurred. Try Refreshing the page.</p>
     </div>

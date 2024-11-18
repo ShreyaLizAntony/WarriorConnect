@@ -1,27 +1,33 @@
 
-.errorImg {
-    position: absolute;
-    width: 582px;
-    height: 479px;
-    left: 395px;
-    top: 138px;
+.errorContainer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    text-align: center; 
+    padding: 20px; 
+    box-sizing: border-box; 
+    width: 100%;
 }
 
-.errorText {
-    position: absolute;
-    width: 810px;
-    height: 78px;
-    left: 315px;
-    top: 673px;
 
+.errorImg {
+    max-width: 80%;
+    height: auto; 
+    margin-bottom: 20px; 
+    margin-left: 300px;
+}
+
+
+.errorText {
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
-    line-height: 48px;
-    text-align: center;
-
+    font-size: 1.5rem; 
+    line-height: 1.5;
     color: #000000;
+    margin: 0; 
+    max-width: 90%; 
+    margin-left: 350px;
 }
-
-

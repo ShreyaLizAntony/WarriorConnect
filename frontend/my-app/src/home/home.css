@@ -1,0 +1,110 @@
+
+
+.profile-container {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #FDFAFA ;
+  }
+  
+  .profile-header h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .profile-header p {
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  
+  .profile-introduction {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+  
+  .introduction-text {
+    width: 100%;
+    padding: 10px;
+    border: 1.2px solid ;
+    resize: none;
+  }
+  
+  .icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
+  .edit-icon {
+    margin-left: 10px;
+  }
+  
+  .socials-section {
+    margin-top: 20px;
+  }
+  
+  .socials-section h2 {
+    display: inline;
+  }
+  
+  .socials-icons {
+    display: inline-flex;
+    gap: 10px;
+    margin-left: 10px;
+  }
+  
+  .socials-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .socials-list li {
+    margin-bottom: 5px;
+  }
+  
+  .courses-section {
+    margin-top: 20px;
+  }
+  
+  .courses-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .courses-table th, .courses-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .save-button {
+    background-color: #FFD700;
+    color: #000;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-top: 20px;
+    display: block;
+    border-radius: 5px;
+  }
+
+  .save-button:hover {
+    background-color: #000000; 
+    color: #FFFF;
+  }
+
+  
+  
