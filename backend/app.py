@@ -1,4 +1,6 @@
-from flask import Flask
+from flask import Flask, request, jsonify
+from database_handler import handle_parse_and_store
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api, reqparse, fields, marshal_with, abort
 from sqlalchemy.dialects.postgresql import ARRAY
@@ -214,6 +216,11 @@ api.add_resource(User, '/api/users/<int:id>')
 
 def home():
 	return "Hello, world!"
+
+@app.route('/parse', methods=['POST'])
+
+def parse_and_store_courses():
+    return handle_parse_and_store(request)
 
 if __name__ == '__main__':
 	app.run(port = 5000, debug = True)
