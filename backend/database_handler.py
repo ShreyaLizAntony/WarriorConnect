@@ -16,19 +16,20 @@ DB_CONFIG = {
 def get_db_connection():
     return psycopg2.connect(**DB_CONFIG)
 
-# Function to store parsed courses in the database
-def store_courses_in_db(courses_df: pd.DataFrame):
+# Function to store parsed class sections in the database
+def store_class_sections_in_db(class_sections_df: pd.DataFrame):
+    class_sections_df = class_sections_df[class_sections_df['component'] == 'LEC']
     conn = get_db_connection()
     cur = conn.cursor()
 
-    for _, row in courses_df.iterrows():
+    for _, row in class_sections_df.iterrows():
         cur.execute(
             """
-            INSERT INTO courses (course_code, program, code, class_nbr, section, component, days_times, room)
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+            INSERT INTO class_section (class_number, course_code, section_number, room, schedule)
+            VALUES (%s, %s, %s, %s, %s, %s)
+            ON CONFLICT (class_number) DO NOTHING
             """,
-            (row['course_code'], row['program'], row['code'], row['class_nbr'],
-             row['section'], row['component'], row['days_times'], row['room'])
+            (row['class_nbr'], row['course_code'], row['section'], row['component'], row['room'], row['days_times'])
         )
 
     conn.commit()
@@ -42,16 +43,16 @@ def handle_parse_and_store(request):
     if not text:
         return jsonify({'error': 'No text provided'}), 400
 
-    # Parse courses
+    # Parse Class Sections
     try:
-        courses_df = parse_courses(text)
+        class_sections_df = parse_courses(text)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
-    # Store parsed courses in database
+    # Store parsed Class Sections in database
     try:
-        store_courses_in_db(courses_df)
+        store_class_sections_in_db(class_sections_df)
     except Exception as e:
-        return jsonify({'error': f"Failed to store courses: {str(e)}"}), 500
+        return jsonify({'error': f"Failed to store class sections: {str(e)}"}), 500
 
-    return jsonify({'message': 'Courses parsed and stored successfully'}), 201
+    return jsonify({'message': 'Class Sections parsed and stored successfully'}), 201

@@ -7,12 +7,12 @@ from sqlalchemy.dialects.postgresql import ARRAY
 
 app = Flask(__name__)
 
-# setup the Postgres Database (need to do)
-username = ""
-password = ""
-dbname = ""
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://{username}:{password}@localhost/{dbname}'
-
+# setup the Postgres Database
+username = "your_username"
+password = "your_password"
+dbname = "my_app"
+port = "5432"
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{username}:{password}@localhost:{port}/{dbname}'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -31,7 +31,6 @@ class ClassSection(db.Model):
 	class_number = db.Column(db.Integer, primary_key=True) # e.g., 2280
 	course_code = db.Column(db.String(10), nullable=False)  # e.g., "CS 246"
 	section_number = db.Column(db.Integer)  # e.g., 201
-	instructor = db.Column(db.String(50))
 	room = db.Column(db.String(10))  # e.g., "MC 4058"
 	schedule = db.Column(db.String(100))  # e.g., "TTh 13:00 - 14:20"
 
@@ -86,29 +85,6 @@ userFields = {
     'snapchat': fields.String,
     'email': fields.String
 }
-
-
-class ClassSections(Resource):
-    def post(self):
-        parser = reqparse.RequestParser()
-        parser.add_argument('course_code', type=str, required=True)
-        parser.add_argument('section_number', type=int, required=True)
-        parser.add_argument('instructor', type=str)
-        parser.add_argument('room', type=str)
-        parser.add_argument('schedule', type=str)
-        args = parser.parse_args()
-
-        section = ClassSection(
-            course_code=args['course_code'],
-            section_number=args['section_number'],
-            instructor=args.get('instructor'),
-            room=args.get('room'),
-            schedule=args.get('schedule')
-        )
-        db.session.add(section)
-        db.session.commit()
-        return {"message": "Class section created successfully"}, 201
-
 
 class Users(Resource):
 	@marshal_with(userFields)
@@ -209,7 +185,6 @@ class User(Resource):
 	
 
 api.add_resource(Users, '/api/users/')
-api.add_resource(ClassSections, '/api/class-sections/')
 api.add_resource(User, '/api/users/<int:id>')
 
 @app.route('/') # ‘https://www.google.com/‘
